@@ -9,6 +9,8 @@ import { HomePage } from '../home/home';
 })
 export class TabsPage {
 
+  color = "sblue";
+
   tab1Root = HomePage;
   tab2Root = AboutPage;
   tab3Root = ContactPage;
@@ -16,4 +18,16 @@ export class TabsPage {
   constructor() {
 
   }
+
+  changeColor(){
+  	if(this.color == "sblue"){
+  		this.color = "light";
+  	}
+}
+
+	colorMain(){
+		this.color = "sblue";
+	}
+
+
 }

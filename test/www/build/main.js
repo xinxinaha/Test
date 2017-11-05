@@ -58,14 +58,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var TabsPage = (function () {
     function TabsPage() {
+        this.color = "sblue";
         this.tab1Root = __WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */];
         this.tab2Root = __WEBPACK_IMPORTED_MODULE_1__about_about__["a" /* AboutPage */];
         this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__contact_contact__["a" /* ContactPage */];
     }
+    TabsPage.prototype.changeColor = function () {
+        if (this.color == "sblue") {
+            this.color = "light";
+        }
+    };
+    TabsPage.prototype.colorMain = function () {
+        this.color = "sblue";
+    };
     return TabsPage;
 }());
 TabsPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/mengyuxin/Desktop/Test/test/src/pages/tabs/tabs.html"*/'<ion-tabs >\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Calendar" tabIcon="calendar"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Education" tabIcon="book"></ion-tab>\n  <ion-tab [root]="tab4Root" tabTitle="Message" tabIcon="contact"></ion-tab>\n\n</ion-tabs>\n'/*ion-inline-end:"/Users/mengyuxin/Desktop/Test/test/src/pages/tabs/tabs.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/mengyuxin/Desktop/Test/test/src/pages/tabs/tabs.html"*/'<ion-tabs color={{color}}>\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home" (ionSelect)="colorMain()"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Calendar" tabIcon="calendar"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Education" tabIcon="book" (ionSelect)="changeColor()"></ion-tab>\n  <ion-tab [root]="tab4Root" tabTitle="Message" tabIcon="contact"></ion-tab>\n\n</ion-tabs>\n'/*ion-inline-end:"/Users/mengyuxin/Desktop/Test/test/src/pages/tabs/tabs.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], TabsPage);
