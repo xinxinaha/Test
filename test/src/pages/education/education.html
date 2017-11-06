@@ -1,0 +1,81 @@
+<ion-header >
+  <ion-navbar color="sblue">
+    <ion-title>
+      Education
+    </ion-title>
+  </ion-navbar>
+  <ion-toolbar color="sblue">
+     <ion-searchbar color="white"></ion-searchbar>
+  </ion-toolbar>
+
+
+
+<ion-toolbar no-border-top color="sblue">
+    <ion-segment [(ngModel)]="edu">
+      <ion-segment-button value="terms">
+        Terms
+      </ion-segment-button>
+      <ion-segment-button value="procedures">
+        Procedures
+      </ion-segment-button>
+      <ion-segment-button value="well-being">
+        Well-being
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <div [ngSwitch]="edu">
+
+  <ion-item-group *ngSwitchCase="'terms'">
+      <ion-item-divider color="light">A</ion-item-divider>
+      <button ion-item detail-none (click)="buttonClick1()">
+          Aadffga
+      </button>
+      <p>{{content1}}</p>
+      <button ion-item detail-none (click)="buttonClick2()">
+          Afgsartsda
+      </button>
+      <p>{{content2}}</p>
+      <button ion-item detail-none (click)="buttonClick3()">
+          Aetef
+      </button>
+      <p>{{content3}}</p>
+  </ion-item-group>
+
+  <ion-item-group *ngSwitchCase="'terms'">
+      <ion-item-divider color="light">B</ion-item-divider>
+      <ion-item>Bangladesh</ion-item>
+      <ion-item>Belarus</ion-item>
+      <ion-item>Belgium</ion-item>
+      <ion-item>Bhutan</ion-item>
+      <ion-item>Bolivia</ion-item>
+      <ion-item>Brazil</ion-item>
+    </ion-item-group>
+
+  <ion-item-group *ngSwitchCase="'procedures'">
+      <ion-item-divider color="light">A</ion-item-divider>
+      <ion-item>Cambodia</ion-item>
+      <ion-item>Cameroon</ion-item>
+      <ion-item>Canada</ion-item>
+      <ion-item>Chile</ion-item>
+      <ion-item>China</ion-item>
+      <ion-item>Colombia</ion-item>
+      <ion-item>Costa Rica</ion-item>
+      <ion-item>Cuba</ion-item>
+      <ion-item>Cyprus</ion-item>
+      <ion-item>Czech Republic</ion-item>
+    </ion-item-group>
+
+    <ion-item-group *ngSwitchCase="'well-being'">
+      <ion-item-divider color="light">A</ion-item-divider>
+      <ion-item>Ajkdf</ion-item>
+      <ion-item>Adfbfd</ion-item>
+      <ion-item>Anjkjk</ion-item>
+      <ion-item>Aurueyi</ion-item>
+    </ion-item-group>
+
+  </div>
+</ion-content>
