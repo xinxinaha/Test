@@ -30535,6 +30535,10 @@ ion-navbar.toolbar {
   background-color: deepskyblue;
 }
 
+.ion-alpha-scroll scroll-content::-webkit-scrollbar {
+  display: none;
+}
+
 page-home {
   background: #00BFFF;
 }
